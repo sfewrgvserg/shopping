@@ -5,6 +5,8 @@ import axios from "axios";
 import Image from "next/image";
 import { MdClose } from "react-icons/md";
 
+import "dotenv/config";
+
 const SubTotal = () => {
   const [data, setData] = useState([]);
   const [isPosting, setIsPosting] = useState(false);
@@ -12,7 +14,7 @@ const SubTotal = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/subTotal");
+        const response = await axios.get(`${process.env.MAIN_URL}subTotal`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -25,10 +27,10 @@ const SubTotal = () => {
   const handlePost = async (itemId) => {
     setIsPosting(true);
     try {
-      await axios.post(`${process.env.MAIN_URL}/decrease`, { _id: itemId });
+      await axios.post(`${process.env.MAIN_URL}decrease`, { _id: itemId });
 
       // Refresh data after successful post
-      const response = await axios.get("http://localhost:3000/subTotal");
+      const response = await axios.get(`${process.env.MAIN_URL}subTotal`);
       setData(response.data);
     } catch (error) {
       console.error("Error posting data:", error);

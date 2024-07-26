@@ -19,7 +19,7 @@ const ProductDetails = ({ data }) => {
   const handlePost = async () => {
     setIsPosting(true); // Set loading indicator for UI
     try {
-      await axios.post(`${process.env.MAIN_URL}/add`, data);
+      await axios.post(`${process.env.MAIN_URL}add`, data);
       console.log("Data posted successfully!");
     } catch (error) {
       console.error("Error posting data:", error);
