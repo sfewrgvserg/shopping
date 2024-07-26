@@ -1,0 +1,6 @@
+.title {
+  @apply text-xl font-medium;
+}
+.space {
+  @apply space-y-2;
+}

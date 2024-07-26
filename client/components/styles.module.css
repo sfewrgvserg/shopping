@@ -1,0 +1,3 @@
+.max_width {
+  @apply max-w-[90%] m-auto;
+}

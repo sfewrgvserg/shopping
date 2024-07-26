@@ -1,0 +1,9 @@
+.li_custom {
+  @apply border-b-2 duration-300 border-white text-stone-700 hover:text-amber-500 hover:border-b-2 hover:border-amber-500;
+}
+.link_custom {
+  @apply flex items-center space-x-1 font-semibold;
+}
+.link {
+  @apply text-amber-500 border-b-2 border-amber-500;
+}
