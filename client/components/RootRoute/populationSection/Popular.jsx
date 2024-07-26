@@ -4,6 +4,7 @@ import axios from "axios";
 import CountProducts from "@/components/womanRoute/countProducts/CountProducts";
 
 import "dotenv/config";
+
 import Link from "next/link";
 import getDiscountedPrice from "@/discount";
 

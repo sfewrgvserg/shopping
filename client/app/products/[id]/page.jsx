@@ -11,6 +11,8 @@ import axios from "axios";
 
 import dynamic from "next/dynamic";
 
+import "dotenv/config";
+
 const ProductPage = async ({ params }) => {
   const { data } = await axios.get(
     `${process.env.MAIN_URL}products/${params.id}`

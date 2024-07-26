@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import { FaStar } from "react-icons/fa6";
@@ -20,6 +20,7 @@ const ProductDetails = ({ data }) => {
     setIsPosting(true); // Set loading indicator for UI
     try {
       await axios.post(`${process.env.MAIN_URL}add`, data);
+      console.log("data://////////////////////", data);
       console.log("Data posted successfully!");
     } catch (error) {
       console.error("Error posting data:", error);

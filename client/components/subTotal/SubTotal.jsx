@@ -24,6 +24,8 @@ const SubTotal = () => {
     fetchData();
   }, []);
 
+  console.log("data:/", data);
+
   const handlePost = async (itemId) => {
     setIsPosting(true);
     try {
